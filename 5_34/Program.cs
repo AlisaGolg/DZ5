@@ -3,13 +3,16 @@
 [345, 897, 568, 234] -> 2
 */
 
-int []array=new int[8];
+int[] array = new int[4];
 int count=0;
-for (int n=0; n<8; n++) 
-    array[n]=new Random().Next(100,1000);
-Console.WriteLine("[" +string.Join(',' , array)+ "]");  
-if (array[n]%2==0)
-    count++;
-    Console.WriteLine(count);
+for (int i = 0; i < 4; i++)
+{
+    array[i] = new Random().Next(100, 1000);
+
+    if (array[i] %2==0)
+        count++;
+}
+Console.WriteLine("[" + string.Join(", ", array) + "]");
+Console.WriteLine(count);
 
 
